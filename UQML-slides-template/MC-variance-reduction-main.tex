@@ -1,0 +1,169 @@
+%\documentclass[handout,aspectratio =169]{beamer}
+\documentclass[presentation,aspectratio =169]{beamer}
+\mode<presentation>
+{
+%  \usetheme{default}
+   \usetheme[left]{Marburg}
+  \usecolortheme{beaver}
+  \usefonttheme{professionalfonts}  
+  \setbeamertemplate{navigation symbols}{
+  \insertframenumber/\inserttotalframenumber
+  }
+  \setbeamertemplate{caption}[numbered]
+ } 
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+  
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Outline}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+
+%\addtobeamertemplate{navigation symbols}{}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+% \usepackage{graphicx}
+\usepackage{array}
+\usepackage{subfig}
+\usepackage{tikz}
+\usepackage{appendixnumberbeamer}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{mathtools}
+% \usepackage{lipsum}
+\usepackage[makeroom]{cancel}
+%\usepackage{minted}
+\usepackage{bm}  
+% \usepackage{xmpmulti}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{calc}  
+%\usepackage[dvipsnames]{xcolor}
+
+
+\definecolor{CMaroon}{RGB}{139,31,65}
+\definecolor{VSunset}{RGB}{247,144,30} %This is really "Virginia Sunset" %\definecolor{VSunset}{RGB}{255,102,0} 
+\definecolor{HStone}{RGB}{109,106,117} 
+ \makeatletter
+\setbeamertemplate{sidebar canvas \beamer@sidebarside}[vertical shading][top=VSunset!60,bottom=VSunset!90]
+\makeatother
+\setbeamercolor{palette sidebar secondary}{fg=CMaroon}
+\setbeamercolor{section in sidebar shaded}{fg=black}
+\setbeamercolor{subsection in sidebar shaded}{fg=black}
+\setbeamercolor{subsection in sidebar}{fg=CMaroon}
+\setbeamerfont{section in sidebar}{series=\bfseries}
+\setbeamerfont{subsection in sidebar shaded}{series=\bfseries}
+\makeatletter
+
+
+\AtBeginLecture{
+\frame{
+\begin{center}
+	\Large Today's Lecture: \\  
+	\vspace{1cm}
+	\insertlecture
+\end{center}
+}
+}
+
+% set sidebar with ToC
+
+
+\graphicspath{{./logos/}{./figs/}}
+
+%\subsection{} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\makeatletter
+\newcommand{\setnextsection}[1]{%
+  \setcounter{section}{\numexpr#1-1\relax}%
+  \beamer@tocsectionnumber=\numexpr#1-1\relax\space}
+\makeatother
+
+\input{headers/macros}
+
+\newcommand{\topicpage}[1]{
+\begin{frame}{}
+\begin{center}
+{\LARGE \color{blue}#1}
+\end{center}
+\end{frame}
+}
+
+%\tikz\draw (0,0) rectangle (0.99\textwidth,0.42\textheight);
+%\newcounter{enumiCont}
+
+\title[AOE 5984: UQML]{AOE5984: \\Machine Learning and Uncertainty Quantification \\
+for Scientists and Engineers\\
+Independence Study}
+\author[Hongsheng Wang]{Hongsheng Wang
+   \\ Ph.D Student
+}
+\institute{Department of Mining and Minerals Engineering \\ Virginia Tech \\
+  \medskip
+  \bigskip
+  \includegraphics[height=20mm,keepaspectratio]{logo} \vspace{5mm}
+  \includegraphics[height=20mm,keepaspectratio]{text}
+}
+\date{~}
+
+
+\begin{document}
+
+
+
+\input{title}
+
+
+\part{Advanced Intro to Probability}
+\setnextsection{1}
+
+
+\section{Introduction to Importance Sampling}
+\outlinechapter{Independence Study: Importance Sampling}
+\input{ImportanceSamplingIntro}
+
+ \section{Example of Importance Sampling}
+\outlinechapter{Independence Study: Importance Sampling}
+ \input{ImportanceSamplingEx}
+
+
+
+\end{document}
+
+
+% Templates
+\begin{frame}{}
+\begin{itemize}
+\item
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{columns}
+\column{0.5\fullcolwidth}
+
+\column{0.5\fullcolwidth}
+% \includegraphics[width=1\textwidth*\real{\figfactor}]{fig-lorenz-63.png}
+\end{columns}
+\end{frame}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

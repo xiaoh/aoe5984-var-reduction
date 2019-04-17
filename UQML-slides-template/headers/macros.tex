@@ -1,0 +1,32 @@
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\var}{\mathbb{V}\textrm{ar}}
+\newcommand{\cov}{\mathbb{C}\textrm{ov}}
+\newcommand{\ex}{\mathbb{E}}
+\newcommand{\wex}{\widehat{\mathbb{E}}}
+\newcommand{\readingslide}[1]{\textcolor{blue}{[#1]}}
+\newcommand{\reviewslide}[1]{\colorbox{green!60}{#1}}
+\newcommand{\defterm}[1]{\textcolor{red}{#1}}
+\newcommand{\credit}[2]{\begin{flushright}
+ \tiny (#1 Courtesy of #2)
+\end{flushright}}
+%\tikz\draw (0,0) rectangle (0.99\textwidth,0.42\textheight);
+\newcounter{enumiCont}
+
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\newcommand{\outlinechapter}[1]{
+  \frame{\frametitle{#1}\tableofcontents[currentsection,currentsubsection]}
+}
+
+\newlength{\fullcolwidth}
+\setlength{\fullcolwidth}{0.95\textwidth}
+
+\newcommand{\figfactor}{0.85}
+\newcommand{\heightfigfactor}{1.15}
